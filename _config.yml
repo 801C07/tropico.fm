@@ -13,7 +13,7 @@ header_text: Boise's Newest Community Radio Project! # Change Blog header text
 header_caption: 103.1 Tropico FM # Change Blog header text
 header_feature_image: assets/img/header/about.jpeg
 header_feature_image_responsive: true
-footer_text: ©2022 Tropico.FM
+footer_text: ©2024 Tropico.FM
 
 # Blog
 excerpt: true # Or "truncate" (first 250 characters), "false" to disable
