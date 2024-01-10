@@ -22,7 +22,6 @@ Perhaps the most empowering aspect about community radio is the exposure that it
 
 ## Sponsors
 
-<a href="https://www.immigrantjusticeidaho.org/"><img src="/assets/img/sponsors/Black IJI-med.png" alt="Immigrant Justice Idaho"></a>
 <a href="https://onebyonefoundation.org/"><img src="/assets/img/sponsors/OBO_logo.svg" alt="One By One Foundation"></a>
 <a href="https://smokeheir.com/"><img src="/assets/img/sponsors/HEIR.png" alt="Smoke Heir"></a>
 
