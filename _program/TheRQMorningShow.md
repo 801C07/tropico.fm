@@ -10,4 +10,4 @@ profile: "/assets/img/programs/RQ.png"
 insta: https://www.facebook.com/ricardo.quilantan
 ---
 
-Born of south Texan and Mexican roots, DJ Dan takes you on a journey through all of the smooth and fun sounds of South Texas and Mexico. From Cumbia Sonidera, to Texas Country, corridos, Musica Norteña and Chicano and Conjunto Tejano sounds, La Vibra Show brings you danceable , regional and nostalgic music!
+RQ has been a radio personality for the past 43 years serving the community with local Spanish news and information and an extensive variety of Latino music. Currently hosting Tejano/Cumbia/Norteño Mix, RQ has been involved with the Latino community since his Teen Years (1970’s). Inspired by the Chicano Movement Era!
