@@ -9,6 +9,7 @@ thumbnail: /assets/img/posts/tmf24/banner.png
 
  <div class="container">
     <div class="text">
+        <img src="/assets/img/posts/tmf24/banner.png" alt="Banner"/>
         <p>Tropico FM returns for a 4th year of art paired with live music during the Treefort Music Festival, hosted at the Basque Center. Twelve local artists will be showing their work on Friday, March 22nd. This is the first and only Treefort show that includes solely LatinX artists. Latin art is more relevant today than ever. In the United States, the exploding population of  people of Latin American descent—and consequently the rise of Spanish (and Spanglish) speakers, Latino musical genres, literature, and visual arts, require that we better understand the cultural origins of these diverse communities. Even beyond the US border, Latin Americans continue to exert influence over political and economic policies, while their artistic traditions are every day made more and more accessible at cultural institutions like art museums, which regularly exhibit the work of Latin American artists. In many ways, Latin American and Latino culture is an inescapable reality!</p>
         <p>Resonancia will feature a captivating array of artistic mediums, including painting, sculpture, photography, and mixed media, offering festival attendees a unique opportunity to immerse themselves in the vibrant narratives and expressions of Latinx identity.</p>
         <img src="/assets/img/posts/tmf24/miguel.png" alt="Miguel Almeida"/>
