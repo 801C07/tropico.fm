@@ -32,7 +32,7 @@ By supporting with Tropico.fm, you not only promote your business but also suppo
 
 ### **Monthly Underwriting Plan: $100/month**
 
-- 1 play per day of your message each month
+- 3 plays per day of your message each month
 - Affordable and budget-friendly
 - Ideal for continuous brand exposure
 - <a href="https://buy.stripe.com/3cs03reCR4Or4NOdQR" target="_blank">Get Started</a>
