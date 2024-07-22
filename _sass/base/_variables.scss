@@ -36,7 +36,7 @@ html[data-theme="light"] {
   --blockquote: #4c8c00;
   --selection: #e5ebe5;
   --meta: #e5ebe5;
-  --link: #e5ebe5;
+  --link: #6277b8; /* Updated link color for better visibility */
   --header-background: #e5ebe5;
   --header-text: #e5ebe5;
   --header-link: #e5ebe5;
@@ -58,7 +58,7 @@ html[data-theme="dark"] {
   --blockquote: #373e47; // blockquote
   --selection: #545d68; // selection
   --meta: #909dab; // meta
-  --link: #00a8e0; // theme, link, link shadow header bg
+  --link: #00a8e0; /* Updated link color for better visibility */
   --header-background: #2a3444; // Color before header image load
   --header-text: #e7f3f4; // header text, feature img text
   --header-link: #adbac7; // header link, search color
