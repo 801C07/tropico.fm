@@ -3,7 +3,7 @@ layout: program
 title: Haunted Happenings
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/HauntedHappenings.png"
-subtitle: Sundays 6-8 PM
+subtitle: 1st Thursdays 5-6 PM
 tags: [Tony and Vera, Haunted Happenings]
 programmer: "Tony and Vera"
 profile: "/assets/img/programs/HauntedHappenings.png"
