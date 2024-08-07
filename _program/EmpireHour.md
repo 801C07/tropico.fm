@@ -3,7 +3,7 @@ layout: program
 title: 5th Empire Hour
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/empirehour.png"
-subtitle: Thursdays 6-8 PM
+subtitle: Tuesdays 6-8 PM
 tags: [5th Empire Hour, The Mighty DeltaOne]
 programmer: "The Mighty DeltaOne"
 profile: "/assets/img/programs/empirehour.png"
