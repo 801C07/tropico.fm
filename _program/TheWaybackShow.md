@@ -4,7 +4,7 @@ title: The Wayback Show
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/wayback.png"
 profile: "/assets/img/programs/wayback.png"
-subtitle: 4-6 PM Fridays
+subtitle: Fridays 3-5 PM
 tags: [DJ PJ]
 programmer: "DJ PJ"
 mixcloud: "https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ftropicofm%2Fplaylists%2Fwayback-show%2F"

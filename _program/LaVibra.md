@@ -3,7 +3,7 @@ layout: program
 title: La Vibra
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/vibra.png"
-subtitle: Wednesday 8-10 PM
+subtitle: Wednesdays 8-11 PM
 tags: [DJ Dan, La Vibra]
 programmer: "DJ Dan"
 profile: "/assets/img/programs/vibra.png"
