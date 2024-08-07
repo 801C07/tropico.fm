@@ -2,7 +2,7 @@
 layout: program
 title: Brazil Primeiro
 feature-img: "assets/img/header/about.jpeg"
-img: "/assets/img/programs/HauntedHappenings.png"
+img: "/assets/img/programs/BrazilPrimeiro.png"
 subtitle: Sundays 2-4 PM
 tags: [Rodrigo Thuja, Brazil Primeiro]
 programmer: "Rodrigo Thuja"
