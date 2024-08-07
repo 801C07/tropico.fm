@@ -3,7 +3,7 @@ layout: program
 title: Raw and Filtered
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/raw.png"
-subtitle: Mondays 6-8 PM 
+subtitle: Thursdays 3-5 PM
 tags: [Maddy B., Najean]
 programmer: "Maddy B. & Najean"
 insta: https://www.instagram.com/rawunfiltered_podcast/

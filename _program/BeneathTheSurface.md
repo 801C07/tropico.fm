@@ -3,7 +3,7 @@ layout: program
 title: Beneath The Surface
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/beneath.png"
-subtitle: Mondays 8-10 PM
+subtitle: Mondays 7-9 PM
 tags: [Beneath The Surface, Madisun Proof]
 programmer: "Madisun Proof"
 profile: "/assets/img/programs/beneath.png"
