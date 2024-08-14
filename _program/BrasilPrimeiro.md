@@ -1,10 +1,10 @@
 ---
 layout: program
-title: Brazil Primeiro
+title: Brasil Primeiro
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/BrazilPrimeiro.png"
 subtitle: Sundays 2-4 PM
-tags: [Rodrigo Thuja, Brazil Primeiro]
+tags: [Rodrigo Thuja, Brasil Primeiro]
 programmer: "Rodrigo Thuja"
 profile: "/assets/img/programs/BrazilPrimeiro.png"
 insta: https://www.instagram.com/BrazilPrimeiroboise
