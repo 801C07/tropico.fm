@@ -30,8 +30,8 @@
       .caption-content {
         font-size: 35px;
         font-family: $font-family-hobo;
-        color: rgb(255, 255, 255);
-        text-shadow: -1px 0 rgb(219, 140, 140), 0 1px rgb(219, 140, 140),
+        color: rgb(49, 44, 44);
+        text-shadow: -1px 0 rgb(219, 140, 140), 0 2px rgb(219, 140, 140),
           1px 0 rgb(219, 140, 140), 0 -1px rgb(219, 140, 140);
         display: inline-block;
         vertical-align: middle;
@@ -39,6 +39,10 @@
         @media screen and (max-width: $sm-break) {
           font-size: 7px;
         }
+      }
+
+      &:hover .caption-content {
+        visibility: visible;
       }
     }
   }
@@ -67,6 +71,12 @@
       1px 0 rgb(219, 140, 140), 0 -1px rgb(219, 140, 140);
     display: inline-block;
     vertical-align: middle;
+    visibility: hidden;
+
+    // on hover show the caption
+    .caption-content:hover {
+      visibility: visible;
+    }
 
     span {
       font-size: 15px;
