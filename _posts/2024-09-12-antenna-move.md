@@ -4,7 +4,7 @@ title: Antenna Move Complete!
 tags: []
 author: kschef
 excerpt_separator: <!--more-->
-thumbnail: /assets/img/posts/tmf24/banner.png
+thumbnail: /assets/img/posts/ant-move.png
 ---
 
  <div class="container">
