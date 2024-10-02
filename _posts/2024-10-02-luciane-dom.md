@@ -8,7 +8,7 @@ thumbnail: /assets/img/posts/l-dom.jpeg
 ---
 
 | :--- | ---: |
-| ![](/assets/img/posts/l-dom-feat.png) | Saturday, October 19th Doors @ 9:00<br> <a href="https://www.eventbrite.com/e/luciane-dom-tickets-1033843302147?aff=oddtdtcreator">Tickets</a>|
+| <a href="https://www.eventbrite.com/e/luciane-dom-tickets-1033843302147?aff=oddtdtcreator">![](/assets/img/posts/l-dom-feat.png)</a> | Saturday, October 19th Doors @ 9:00<br> <a href="https://www.eventbrite.com/e/luciane-dom-tickets-1033843302147?aff=oddtdtcreator">Tickets</a>|
 
  <div class="container">
     <div class="text">
