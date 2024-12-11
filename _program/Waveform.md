@@ -7,7 +7,7 @@ subtitle: 1st and 3rd Fridays, 6 - 8 PM
 tags: [Waveform, LX]
 programmer: "LX"
 profile: "/assets/img/programs/waveform.png"
-# insta: https://www.instagram.com/mikegradian/
+insta: https://www.instagram.com/waveform.radio/
 mixcloud: "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ftropicofm%2Fplaylists%2Fwaveform%2F"
 ---
 
