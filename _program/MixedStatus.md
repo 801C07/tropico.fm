@@ -4,8 +4,8 @@ title: Mixed/Status
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/MixedStatus.png"
 subtitle: 2nd and 4th Saturday 11 AM - 1 PM
-tags: [Mixed/Status, Chabala]
-programmer: "Chabala"
+tags: [Mixed/Status, Chabela]
+programmer: "Chabela"
 profile: "/assets/img/programs/MixedStatus.png"
 # insta: https://www.instagram.com/mikegradian/
 mixcloud: "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ftropicofm%2Fplaylists%2Fmixedstatus%2F"
