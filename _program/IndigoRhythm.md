@@ -7,7 +7,7 @@ subtitle: 2nd and 4th Tuesdays, 5-7 PM
 tags: [OsmiaEvolet, Indigo Rhythm]
 programmer: "OsmiaEvolet"
 profile: "/assets/img/programs/indigoRhythm.png"
-insta: https://www.instagram.com/nug_vegas/
+# insta: https://www.instagram.com/nug_vegas/
 mixcloud: "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ftropicofm%2Fplaylists%2Findigo-rhythm%2F"
 ---
 
