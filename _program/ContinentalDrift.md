@@ -6,7 +6,7 @@ img: "/assets/img/programs/contdrift.png"
 subtitle: 1st and 3rd Tursdays 5-7 PM
 tags: [Nug Vegas, Continental Drift]
 programmer: "Nug Vegas"
-profile: "/assets/img/programs/jordan.jpg"
+profile: "/assets/img/programs/jordan.png"
 insta: https://www.instagram.com/nug_vegas/
 mixcloud: "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ftropicofm%2Fplaylists%2Fcontinental-drift%2F"
 ---
