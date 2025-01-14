@@ -1,10 +1,10 @@
 ---
 layout: program
-title: EL SASÓN
+title: EL SAZÓN
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/ElSazon.png"
 subtitle: Wednesdays 4-6 PM
-tags: [DJ Alex 1, EL SASÓN]
+tags: [DJ Alex 1, EL SAZÓN]
 programmer: "DJ Alex 1"
 profile: "/assets/img/programs/ElSazon.png"
 insta: https://www.instagram.com/djalexone
