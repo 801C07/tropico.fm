@@ -8,9 +8,7 @@ tags: []
 
 # What is Tropico FM?
 
-KFFI 103.1 Tropico FM is Boise’s newest (& 2nd) community radio station. We are an independently owned & operated noncommercial Low Power FM station. Tropico FM is a program of Vivo Latino, a registered 501(c)3 organization.
-
-Tropico FM exists first & foremost as a resource for the Treasure Valley community. Our frequency is lent to local musicians, artists, activists, and much more. The programming reflects the diversity of ethnic backgrounds that make up Boise & beyond. We seek to serve the interests of the underserved. Independent radio provides a human connection between the audience & the music they are hearing that is absent in streaming. The audience of an independent radio station is actively engaged because of the experience; with DJ’s introducing the next song, giving back story & relevant artist information/music history. Community radio stations have the ability to connect people with shared interests, give voices to the disenfranchised, and go places that commercial radio refuses to.
+KFFI 103.1 Tropico FM is dedicated to serving Idaho’s Latin American & BIPOC communities. Our frequency is lent to local musicians, artists, activists. We bring the vibrant sounds of the Caribbean, Latin America, and the African Diaspora to our listeners, while also shining a spotlight on local community events. Our mission is to celebrate and uplift diverse voices through music and meaningful engagement, fostering a stronger, more connected community. Tropico FM is a program of Vivo Latino, a registered 501(c)3 organization.
 
 ## Why independent media?
 
