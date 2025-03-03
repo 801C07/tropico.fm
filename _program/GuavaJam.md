@@ -3,7 +3,7 @@ layout: program
 title: Guava Jam
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/GuavaJam.png"
-subtitle: Sundays 4 PM -6 PM
+subtitle: Sundays 4 PM - 6 PM
 tags: [DJ Duhbreez, Guava Jam]
 programmer: "DJ Duhbreez"
 profile: "/assets/img/programs/GuavaJam.png"

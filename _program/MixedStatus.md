@@ -3,7 +3,7 @@ layout: program
 title: Mixed/Status
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/MixedStatus.png"
-subtitle: 2nd and 4th Saturday 11 AM - 1 PM
+subtitle: 2nd and 4th Saturdays 11 AM - 1 PM
 tags: [Mixed/Status, Chabela]
 programmer: "Chabela"
 profile: "/assets/img/programs/MixedStatus.png"
