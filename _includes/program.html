@@ -1,15 +1,13 @@
 <!-- Live Show Banner -->
 <div class="live-show-banner">
-  <div class="marquee-container">
-    <div class="marquee">
-      <span class="live-text">🔴 LIVE NOW:</span>
+  <div class="banner-content">
+    <span class="live-text">🔴 LIVE NOW:</span>
+    <a
+      href="http://www.radiorethink.com/tuner/?stationCode=tropico&stream=hi"
+      class="banner-link"
+    >
       <span class="show-title" id="currentShowTitle"></span>
-      <a
-        href="http://www.radiorethink.com/tuner/?stationCode=tropico&stream=hi"
-        class="listen-live-btn"
-        >Listen Live</a
-      >
-    </div>
+    </a>
   </div>
 </div>
 
@@ -62,41 +60,46 @@
   .live-show-banner {
     background: #004d00;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
     margin-bottom: 30px;
     overflow: hidden;
   }
 
-  .marquee-container {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .marquee {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee 20s linear infinite;
+  .banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    animation: pulse 2s ease-in-out infinite;
   }
 
   .live-text {
     color: #ff6b6b;
     font-weight: bold;
-    margin-right: 10px;
+    font-size: 1.2em;
   }
 
-  .listen-live-btn {
-    background: #ff6b6b;
+  .banner-link {
     color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.9em;
-    transition: background-color 0.2s;
+    transition: color 0.2s;
+    font-size: 1.2em;
   }
 
-  .listen-live-btn:hover {
-    background: #ff4444;
+  .banner-link:hover {
+    color: #99ff99;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   .schedule-calendar {
@@ -222,10 +225,10 @@
 
   @keyframes marquee {
     0% {
-      transform: translateX(100%);
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-200%);
     }
   }
 
