@@ -649,11 +649,13 @@
 
     // Update live show banner
     const liveShow = shows.find((show) => isShowLive(show.schedule));
+    const banner = document.querySelector(".live-show-banner");
     if (liveShow) {
       document.getElementById("currentShowTitle").textContent = liveShow.title;
     } else {
-      document.querySelector(".live-show-banner").style.display = "none";
+      document.getElementById("currentShowTitle").textContent = "Tropico Mix";
     }
+    banner.style.display = "block";
 
     // Generate initial calendar
     generateCalendar(currentYear, currentMonth);
