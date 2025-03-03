@@ -8,7 +8,7 @@ tags: []
 
 # What is Tropico FM?
 
-KFFI 103.1 Tropico FM is dedicated to serving Idaho’s Latin American & BIPOC communities. Our frequency is lent to local musicians, artists, activists. We bring the vibrant sounds of the Caribbean, Latin America, and the African Diaspora to our listeners, while also shining a spotlight on local community events. Our mission is to celebrate and uplift diverse voices through music and meaningful engagement, fostering a stronger, more connected community. Tropico FM is a program of Vivo Latino, a registered 501(c)3 organization.
+KFFI 103.1 Tropico FM is dedicated to serving Idaho’s Latin American & BIPOC communities. Our frequency is lent to local musicians, artists, activists. We bring the vibrant sounds of the Caribbean, Latin America, and the African Diaspora to our listeners, while also shining a spotlight on local community events. Our mission is to celebrate and uplift diverse voices through music and meaningful engagement, fostering a stronger, more connected community.
 
 ## Why independent media?
 
