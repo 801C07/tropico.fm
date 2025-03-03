@@ -3,7 +3,7 @@ layout: program
 title: The Juice Box
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/JuiceBox.png"
-subtitle: Mondays 3-5 PM
+subtitle: Mondays 3 PM - 5 PM
 tags: [DJ Jackson Cole, The Juice Box]
 programmer: "DJ Jackson Cole"
 profile: "/assets/img/programs/JuiceBox.png"

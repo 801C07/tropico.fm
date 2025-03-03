@@ -3,7 +3,7 @@ layout: program
 title: Indigo Rhythm
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/indigoRhythm.png"
-subtitle: 2nd and 4th Tuesdays, 5-7 PM
+subtitle: 2nd and 4th Tuesdays 5 PM - 7 PM
 tags: [OsmiaEvolet, Indigo Rhythm]
 programmer: "OsmiaEvolet"
 profile: "/assets/img/programs/indigoRhythm.png"

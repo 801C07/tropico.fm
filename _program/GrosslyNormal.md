@@ -3,7 +3,7 @@ layout: program
 title: Grossly Normal
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/gross.png"
-subtitle: Tuesdays 3-5 PM
+subtitle: Tuesdays 3 PM -5 PM
 tags: [Grossly Normal, Erica]
 programmer: "Erica"
 profile: "/assets/img/programs/gross.png"

@@ -3,7 +3,7 @@ layout: program
 title: The Brazilian Beat
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/BrazilBeat.png"
-subtitle: Mondays 1-3 PM
+subtitle: Mondays 1 PM - 3 PM
 tags: [The Brazilian Beat, Allen Thayer]
 programmer: "Allen Thayer"
 profile: "/assets/img/programs/BBeat.png"

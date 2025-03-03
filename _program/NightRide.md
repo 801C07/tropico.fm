@@ -3,7 +3,7 @@ layout: program
 title: Night Ride
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/NightRide.png"
-subtitle: 2nd and 4th Thursdays 9-11 PM
+subtitle: 2nd and 4th Thursdays 9 PM - 11 PM
 tags: [DJ Rochester, Night Ride]
 programmer: "DJ Rochester"
 profile: "/assets/img/programs/NightRide.png"

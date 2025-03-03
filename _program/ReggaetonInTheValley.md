@@ -3,7 +3,7 @@ layout: program
 title: Reggaeton In The Valley
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/RegInTheValley.png"
-subtitle: Saturdays 1-2 PM
+subtitle: Saturdays 1 PM - 2 PM
 tags: [Evoljay & Javi, Reggaeton In The Valley]
 programmer: "Evoljay & Javi"
 profile: "/assets/img/programs/RegInTheValley.png"

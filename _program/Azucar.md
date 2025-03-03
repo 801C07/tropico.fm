@@ -3,7 +3,7 @@ layout: program
 title: Azucar
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/azucar.png"
-subtitle: Saturdays 5-8 PM
+subtitle: Saturdays 5 PM - 8 PM
 tags: [Neolito, Azucar]
 programmer: "Noelito"
 profile: "/assets/img/programs/noelito.jpg"

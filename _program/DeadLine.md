@@ -3,7 +3,7 @@ layout: program
 title: Deadline
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/DeadLine.png"
-subtitle: Mondays 5-7 PM
+subtitle: Mondays 5 PM - 7 PM
 tags: [Tessa Ritchey, Deadline]
 programmer: "Tessa Ritchey"
 profile: "/assets/img/programs/DeadLine.png"

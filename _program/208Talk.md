@@ -4,7 +4,7 @@ title: 208 Talk
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/208Talk.png"
 profile: "/assets/img/programs/208Talk.png"
-subtitle: 5-6 PM Mondays
+subtitle: Mondays 5 PM - 6 PM
 tags: [K-Schef]
 programmer: "K-Schef"
 mixcloud: "https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ftropicofm%2Fplaylists%2F208-talk%2F"

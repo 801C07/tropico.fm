@@ -3,7 +3,7 @@ layout: program
 title: Firme Friday
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/Firme.png"
-subtitle: Fridays 1-3 PM
+subtitle: Fridays 1 PM - 3 PM
 tags: [Maestra Mo, Firme Friday]
 programmer: "Maestra Mo"
 profile: "/assets/img/programs/Firme.png"

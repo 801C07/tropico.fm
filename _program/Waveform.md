@@ -3,7 +3,7 @@ layout: program
 title: Waveform
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/waveform.png"
-subtitle: 1st and 3rd Fridays, 6 - 8 PM
+subtitle: 1st and 3rd Fridays 6 PM - 8 PM
 tags: [Waveform, LX]
 programmer: "LX"
 profile: "/assets/img/programs/waveform.png"

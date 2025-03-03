@@ -3,7 +3,7 @@ layout: program
 title: EL SAZÓN
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/ElSazon.png"
-subtitle: Wednesdays 4-6 PM
+subtitle: Wednesdays 4 PM - 6 PM
 tags: [DJ Alex 1, EL SAZÓN]
 programmer: "DJ Alex 1"
 profile: "/assets/img/programs/ElSazon.png"

@@ -3,7 +3,7 @@ layout: program
 title: The Vibe
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/TheVibe.png"
-subtitle: Sundays 6-8 PM
+subtitle: Sundays 6 PM - 8 PM
 tags: [DJ Dan, The Vibe]
 programmer: "DJ Dan"
 profile: "/assets/img/programs/TheVibe.png"

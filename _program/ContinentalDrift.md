@@ -3,7 +3,7 @@ layout: program
 title: Continental Drift
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/contdrift.png"
-subtitle: 1st and 3rd Tursdays 5-7 PM
+subtitle: 1st and 3rd Tuesdays 5 PM - 7 PM
 tags: [Nug Vegas, Continental Drift]
 programmer: "Nug Vegas"
 profile: "/assets/img/programs/jordan.png"

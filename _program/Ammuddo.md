@@ -4,7 +4,7 @@ title: Ammuddo
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/ammuddo.png"
 profile: "/assets/img/programs/ammuddo.png"
-subtitle: 2nd and 4th Thursdays, 7-9 PM
+subtitle: 2nd and 4th Thursdays, 7 PM - 9 PM
 tags: [Hunter Levy]
 programmer: "Hunter Levy"
 mixcloud: "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ftropicofm%2Fplaylists%2Fammudo%2F"
