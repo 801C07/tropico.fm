@@ -1,20 +1,605 @@
-<!-- Portfolio Grid Section -->
-<div class="portfolio-grid">
-  {% for item in site.program %}
-  <div class="portfolio-cell">
-    <a
-      class="portfolio-link"
-      data-keyboard="true"
-      href="{{ item.url | relative_url }}"
-    >
-      <div class="caption">
-        <div class="caption-content">
-          <div>{{item.title}}</div>
-          <span>{{item.subtitle}}</span>
-        </div>
-      </div>
-      <img alt="" class="" src="{{ item.img | relative_url }}" />
-    </a>
+<!-- Live Show Banner -->
+<div class="live-show-banner">
+  <div class="marquee-container">
+    <div class="marquee">
+      <span class="live-text">🔴 LIVE NOW:</span>
+      <span class="show-title" id="currentShowTitle"></span>
+      <a
+        href="http://www.radiorethink.com/tuner/?stationCode=tropico&stream=hi"
+        class="listen-live-btn"
+        >Listen Live</a
+      >
+    </div>
   </div>
-  {% endfor %}
 </div>
+
+<!-- View Tabs -->
+<div class="view-tabs">
+  <button class="tab-button active" data-view="calendar">
+    Program Schedule
+  </button>
+  <button class="tab-button" data-view="list">All Programs</button>
+</div>
+
+<!-- Calendar View -->
+<div class="view-content" id="calendar-view">
+  <div class="schedule-calendar">
+    <div class="calendar-controls">
+      <button id="prevMonth">&lt;</button>
+      <span id="currentMonth"></span>
+      <button id="nextMonth">&gt;</button>
+    </div>
+    <div class="calendar-grid" id="scheduleCalendar">
+      <!-- Calendar will be populated by JavaScript -->
+    </div>
+  </div>
+</div>
+
+<!-- List View -->
+<div class="view-content hidden" id="list-view">
+  <div class="portfolio-grid">
+    {% for item in site.program %}
+    <div class="portfolio-cell">
+      <a
+        class="portfolio-link"
+        data-keyboard="true"
+        href="{{ item.url | relative_url }}"
+      >
+        <div class="caption">
+          <div class="caption-content">
+            <div>{{item.title}}</div>
+            <span>{{item.subtitle}}</span>
+          </div>
+        </div>
+        <img alt="" class="" src="{{ item.img | relative_url }}" />
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .live-show-banner {
+    background: #004d00;
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+
+  .live-text {
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .listen-live-btn {
+    background: #ff6b6b;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+  }
+
+  .listen-live-btn:hover {
+    background: #ff4444;
+  }
+
+  .schedule-calendar {
+    margin-bottom: 40px;
+    background: #004d00;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .schedule-calendar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .calendar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .calendar-controls button {
+    background: #003300;
+    color: white;
+    border: 1px solid #006600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .calendar-controls button:hover {
+    background: #006600;
+  }
+
+  #currentMonth {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .calendar-day {
+    border: 1px solid #006600;
+    padding: 10px;
+    min-height: 120px;
+    background: #003300;
+    transition: background-color 0.2s;
+  }
+
+  .calendar-day:hover {
+    background: #004400;
+  }
+
+  .calendar-day.today {
+    background: #004400;
+    border: 2px solid #00ff00;
+  }
+
+  .calendar-day-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #99ff99;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+
+  .show-item {
+    font-size: 0.85em;
+    margin: 5px 0;
+    padding: 8px;
+    background: #005500;
+    border-radius: 4px;
+    border-left: 3px solid #00cc00;
+    color: white;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+
+  .show-item:hover {
+    background: #006600;
+    transform: translateX(2px);
+  }
+
+  .show-item.live {
+    background: #006600;
+    border-left-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .view-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tab-button {
+    background: #003300;
+    color: white;
+    border: 1px solid #006600;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1em;
+  }
+
+  .tab-button:hover {
+    background: #004400;
+  }
+
+  .tab-button.active {
+    background: #004d00;
+    border-color: #00ff00;
+  }
+
+  .view-content {
+    display: block;
+  }
+
+  .view-content.hidden {
+    display: none;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .calendar-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .calendar-day-header {
+      display: none;
+    }
+
+    .calendar-day {
+      min-height: auto;
+      margin-bottom: 10px;
+    }
+
+    .calendar-day:empty {
+      display: none;
+    }
+
+    .calendar-day::before {
+      content: attr(data-day);
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #99ff99;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .view-tabs {
+      flex-direction: row;
+      padding: 0 10px;
+    }
+
+    .tab-button {
+      flex: 1;
+      padding: 8px;
+      font-size: 0.9em;
+    }
+
+    #currentMonth {
+      font-size: 1em;
+    }
+
+    .calendar-controls {
+      gap: 10px;
+    }
+
+    .calendar-controls button {
+      padding: 5px 10px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Function to parse schedule string
+    function parseSchedule(subtitle) {
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      // Handle regular weekly shows (e.g., "Mondays 5 PM - 6 PM")
+      let weeklyMatch = subtitle.match(
+        /(\w+)s (\d+) (?:AM|PM) - (\d+) (?:AM|PM)/
+      );
+      if (weeklyMatch) {
+        const [_, day, startHour, endHour] = weeklyMatch;
+        const dayIndex = days.indexOf(day);
+        return {
+          type: "weekly",
+          dayIndex,
+          startHour: parseInt(startHour),
+          endHour: parseInt(endHour),
+        };
+      }
+
+      // Handle bi-weekly shows (e.g., "2nd and 4th Thursdays 7 PM - 9 PM")
+      let biWeeklyMatch = subtitle.match(
+        /(\d+)(?:st|nd|rd|th) and (\d+)(?:st|nd|rd|th) (\w+)s (\d+) (?:AM|PM) - (\d+) (?:AM|PM)/
+      );
+      if (biWeeklyMatch) {
+        const [_, firstWeek, secondWeek, day, startHour, endHour] =
+          biWeeklyMatch;
+        const dayIndex = days.indexOf(day);
+        return {
+          type: "biweekly",
+          firstWeek: parseInt(firstWeek),
+          secondWeek: parseInt(secondWeek),
+          dayIndex,
+          startHour: parseInt(startHour),
+          endHour: parseInt(endHour),
+        };
+      }
+
+      // Handle monthly shows (e.g., "1st Thursdays 5 PM - 6 PM")
+      let monthlyMatch = subtitle.match(
+        /(\d+)(?:st|nd|rd|th) (\w+)s (\d+) (?:AM|PM) - (\d+) (?:AM|PM)/
+      );
+      if (monthlyMatch) {
+        const [_, week, day, startHour, endHour] = monthlyMatch;
+        const dayIndex = days.indexOf(day);
+        return {
+          type: "monthly",
+          week: parseInt(week),
+          dayIndex,
+          startHour: parseInt(startHour),
+          endHour: parseInt(endHour),
+        };
+      }
+
+      // Handle every third week shows (e.g., "Every 3rd Thursday 7 PM - 9 PM")
+      let everyNthMatch = subtitle.match(
+        /Every (\d+)(?:st|nd|rd|th) (\w+) (\d+) (?:AM|PM) - (\d+) (?:AM|PM)/
+      );
+      if (everyNthMatch) {
+        const [_, week, day, startHour, endHour] = everyNthMatch;
+        const dayIndex = days.indexOf(day);
+        return {
+          type: "everyNth",
+          week: parseInt(week),
+          dayIndex,
+          startHour: parseInt(startHour),
+          endHour: parseInt(endHour),
+        };
+      }
+
+      return null;
+    }
+
+    // Function to check if a show is currently live
+    function isShowLive(schedule) {
+      if (!schedule) return false;
+      const now = new Date();
+      const currentHour = now.getHours();
+      const currentDay = now.getDay();
+      const currentWeek = Math.ceil(now.getDate() / 7);
+      const currentMonth = now.getMonth();
+
+      switch (schedule.type) {
+        case "weekly":
+          return (
+            currentDay === schedule.dayIndex &&
+            currentHour >= schedule.startHour &&
+            currentHour < schedule.endHour
+          );
+
+        case "biweekly":
+          return (
+            currentDay === schedule.dayIndex &&
+            (currentWeek === schedule.firstWeek ||
+              currentWeek === schedule.secondWeek) &&
+            currentHour >= schedule.startHour &&
+            currentHour < schedule.endHour
+          );
+
+        case "monthly":
+          return (
+            currentDay === schedule.dayIndex &&
+            currentWeek === schedule.week &&
+            currentHour >= schedule.startHour &&
+            currentHour < schedule.endHour
+          );
+
+        case "everyNth":
+          return (
+            currentDay === schedule.dayIndex &&
+            currentWeek === schedule.week &&
+            currentHour >= schedule.startHour &&
+            currentHour < schedule.endHour
+          );
+
+        default:
+          return false;
+      }
+    }
+
+    // Function to check if a show is on a specific date
+    function isShowOnDate(schedule, date) {
+      if (!schedule) return false;
+      const day = date.getDay();
+      const week = Math.ceil(date.getDate() / 7);
+
+      switch (schedule.type) {
+        case "weekly":
+          return day === schedule.dayIndex;
+
+        case "biweekly":
+          return (
+            day === schedule.dayIndex &&
+            (week === schedule.firstWeek || week === schedule.secondWeek)
+          );
+
+        case "monthly":
+          return day === schedule.dayIndex && week === schedule.week;
+
+        case "everyNth":
+          return day === schedule.dayIndex && week === schedule.week;
+
+        default:
+          return false;
+      }
+    }
+
+    // Function to generate calendar for a specific month
+    function generateCalendar(year, month) {
+      const calendar = document.getElementById("scheduleCalendar");
+      calendar.innerHTML = "";
+
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const daysInMonth = lastDay.getDate();
+      const startingDay = firstDay.getDay();
+
+      // Update month display
+      document.getElementById("currentMonth").textContent =
+        firstDay.toLocaleString("default", { month: "long", year: "numeric" });
+
+      // Add day headers (will be hidden on mobile)
+      const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      dayNames.forEach((day) => {
+        const header = document.createElement("div");
+        header.className = "calendar-day-header";
+        header.textContent = day;
+        calendar.appendChild(header);
+      });
+
+      // Add empty cells for days before the first of the month
+      for (let i = 0; i < startingDay; i++) {
+        const emptyDay = document.createElement("div");
+        emptyDay.className = "calendar-day";
+        calendar.appendChild(emptyDay);
+      }
+
+      // Add days of the month
+      for (let day = 1; day <= daysInMonth; day++) {
+        const date = new Date(year, month, day);
+        const dayDiv = document.createElement("div");
+        dayDiv.className = "calendar-day";
+
+        // Add full date for mobile view
+        dayDiv.setAttribute(
+          "data-day",
+          `${dayNames[date.getDay()]}, ${date.toLocaleString("default", {
+            month: "short",
+          })} ${day}`
+        );
+
+        if (date.toDateString() === new Date().toDateString()) {
+          dayDiv.classList.add("today");
+        }
+
+        const dateHeader = document.createElement("div");
+        dateHeader.textContent = day;
+        dayDiv.appendChild(dateHeader);
+
+        const dayShows = shows.filter((show) => {
+          const schedule = parseSchedule(show.subtitle);
+          return isShowOnDate(schedule, date);
+        });
+
+        dayShows.forEach((show) => {
+          const showLink = document.createElement("a");
+          showLink.className = "show-item";
+          showLink.href = show.url;
+          const schedule = parseSchedule(show.subtitle);
+          if (schedule) {
+            const timeStr = `${schedule.startHour} ${
+              schedule.startHour >= 12 ? "PM" : "AM"
+            } - ${schedule.endHour} ${schedule.endHour >= 12 ? "PM" : "AM"}`;
+            showLink.textContent = `${show.title} (${timeStr})`;
+            if (isShowLive(schedule)) {
+              showLink.classList.add("live");
+            }
+          }
+          dayDiv.appendChild(showLink);
+        });
+
+        calendar.appendChild(dayDiv);
+      }
+    }
+
+    // Initialize calendar
+    const today = new Date();
+    let currentYear = today.getFullYear();
+    let currentMonth = today.getMonth();
+
+    // Get all shows with their URLs
+    const shows = Array.from(document.querySelectorAll(".portfolio-cell")).map(
+      (cell) => ({
+        title: cell.querySelector(".caption-content div").textContent,
+        subtitle: cell.querySelector(".caption-content span").textContent,
+        url: cell.querySelector("a.portfolio-link").getAttribute("href"),
+      })
+    );
+
+    // Update live show banner
+    const liveShow = shows.find((show) =>
+      isShowLive(parseSchedule(show.subtitle))
+    );
+    if (liveShow) {
+      document.getElementById("currentShowTitle").textContent = liveShow.title;
+    } else {
+      document.querySelector(".live-show-banner").style.display = "none";
+    }
+
+    // Generate initial calendar
+    generateCalendar(currentYear, currentMonth);
+
+    // Add month navigation
+    document.getElementById("prevMonth").addEventListener("click", () => {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      generateCalendar(currentYear, currentMonth);
+    });
+
+    document.getElementById("nextMonth").addEventListener("click", () => {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      generateCalendar(currentYear, currentMonth);
+    });
+
+    // Tab switching functionality
+    const tabs = document.querySelectorAll(".tab-button");
+    const views = document.querySelectorAll(".view-content");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const targetView = tab.getAttribute("data-view");
+
+        // Update active tab
+        tabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        // Show/hide views
+        views.forEach((view) => {
+          if (view.id === `${targetView}-view`) {
+            view.classList.remove("hidden");
+          } else {
+            view.classList.add("hidden");
+          }
+        });
+      });
+    });
+  });
+</script>
