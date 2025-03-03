@@ -313,68 +313,90 @@
         "Saturday",
       ];
 
-      // Handle regular weekly shows (e.g., "Mondays 5 PM - 6 PM")
-      let weeklyMatch = subtitle.match(
-        /(\w+)s (\d+) (?:AM|PM) - (\d+) (?:AM|PM)/
+      function convertTo24Hour(hour, meridiem) {
+        hour = parseInt(hour);
+        if (meridiem === "PM" && hour !== 12) {
+          hour += 12;
+        } else if (meridiem === "AM" && hour === 12) {
+          hour = 0;
+        }
+        return hour;
+      }
+
+      // Handle every third week shows (e.g., "Every 3rd Thursday 7 PM - 9 PM")
+      let everyNthMatch = subtitle.match(
+        /Every (\d+)(?:st|nd|rd|th) (\w+) (\d+) (AM|PM) - (\d+) (AM|PM)/
       );
-      if (weeklyMatch) {
-        const [_, day, startHour, endHour] = weeklyMatch;
+      if (everyNthMatch) {
+        console.log("Every Nth match found:", everyNthMatch);
+        const [_, week, day, startHour, startMeridiem, endHour, endMeridiem] =
+          everyNthMatch;
         const dayIndex = days.indexOf(day);
         return {
-          type: "weekly",
+          type: "everyNth",
+          week: parseInt(week),
           dayIndex,
-          startHour: parseInt(startHour),
-          endHour: parseInt(endHour),
+          startHour: convertTo24Hour(startHour, startMeridiem),
+          endHour: convertTo24Hour(endHour, endMeridiem),
         };
       }
 
-      // Handle bi-weekly shows (e.g., "2nd and 4th Thursdays 7 PM - 9 PM")
+      // Handle bi-weekly shows first (e.g., "2nd and 4th Tuesdays 5 PM - 7 PM")
       let biWeeklyMatch = subtitle.match(
-        /(\d+)(?:st|nd|rd|th) and (\d+)(?:st|nd|rd|th) (\w+)s (\d+) (?:AM|PM) - (\d+) (?:AM|PM)/
+        /(\d+)(?:st|nd|rd|th) and (\d+)(?:st|nd|rd|th) (\w+)s (\d+) (AM|PM) - (\d+) (AM|PM)/
       );
       if (biWeeklyMatch) {
-        const [_, firstWeek, secondWeek, day, startHour, endHour] =
-          biWeeklyMatch;
+        console.log("Bi-weekly match found:", biWeeklyMatch);
+        const [
+          _,
+          firstWeek,
+          secondWeek,
+          day,
+          startHour,
+          startMeridiem,
+          endHour,
+          endMeridiem,
+        ] = biWeeklyMatch;
         const dayIndex = days.indexOf(day);
         return {
           type: "biweekly",
           firstWeek: parseInt(firstWeek),
           secondWeek: parseInt(secondWeek),
           dayIndex,
-          startHour: parseInt(startHour),
-          endHour: parseInt(endHour),
+          startHour: convertTo24Hour(startHour, startMeridiem),
+          endHour: convertTo24Hour(endHour, endMeridiem),
         };
       }
 
       // Handle monthly shows (e.g., "1st Thursdays 5 PM - 6 PM")
       let monthlyMatch = subtitle.match(
-        /(\d+)(?:st|nd|rd|th) (\w+)s (\d+) (?:AM|PM) - (\d+) (?:AM|PM)/
+        /(\d+)(?:st|nd|rd|th) (\w+)s (\d+) (AM|PM) - (\d+) (AM|PM)/
       );
       if (monthlyMatch) {
-        const [_, week, day, startHour, endHour] = monthlyMatch;
+        console.log("Monthly match found:", monthlyMatch);
+        const [_, week, day, startHour, startMeridiem, endHour, endMeridiem] =
+          monthlyMatch;
         const dayIndex = days.indexOf(day);
         return {
           type: "monthly",
           week: parseInt(week),
           dayIndex,
-          startHour: parseInt(startHour),
-          endHour: parseInt(endHour),
+          startHour: convertTo24Hour(startHour, startMeridiem),
+          endHour: convertTo24Hour(endHour, endMeridiem),
         };
       }
 
-      // Handle every third week shows (e.g., "Every 3rd Thursday 7 PM - 9 PM")
-      let everyNthMatch = subtitle.match(
-        /Every (\d+)(?:st|nd|rd|th) (\w+) (\d+) (?:AM|PM) - (\d+) (?:AM|PM)/
-      );
-      if (everyNthMatch) {
-        const [_, week, day, startHour, endHour] = everyNthMatch;
+      // Handle regular weekly shows last (e.g., "Mondays 5 PM - 6 PM")
+      let weeklyMatch = subtitle.match(/(\w+)s (\d+) (AM|PM) - (\d+) (AM|PM)/);
+      if (weeklyMatch) {
+        const [_, day, startHour, startMeridiem, endHour, endMeridiem] =
+          weeklyMatch;
         const dayIndex = days.indexOf(day);
         return {
-          type: "everyNth",
-          week: parseInt(week),
+          type: "weekly",
           dayIndex,
-          startHour: parseInt(startHour),
-          endHour: parseInt(endHour),
+          startHour: convertTo24Hour(startHour, startMeridiem),
+          endHour: convertTo24Hour(endHour, endMeridiem),
         };
       }
 
@@ -432,22 +454,62 @@
     function isShowOnDate(schedule, date) {
       if (!schedule) return false;
       const day = date.getDay();
-      const week = Math.ceil(date.getDate() / 7);
+
+      // Calculate which occurrence of this day it is in the month
+      const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+      const firstDayOfWeek = firstDayOfMonth.getDay();
+
+      // Calculate the first occurrence of this day in the month
+      const firstOccurrenceOfDay =
+        schedule.dayIndex >= firstDayOfWeek
+          ? 1 + (schedule.dayIndex - firstDayOfWeek)
+          : 1 + (7 - (firstDayOfWeek - schedule.dayIndex));
+
+      // Calculate which week this date falls on
+      const week = Math.floor((date.getDate() - firstOccurrenceOfDay) / 7) + 1;
+
+      // Debug logging for March 4th
+      if (
+        date.getFullYear() === 2024 &&
+        date.getMonth() === 2 &&
+        date.getDate() === 4
+      ) {
+        console.log("=== Debug for March 4th, 2024 ===");
+        console.log(`Day index: ${schedule.dayIndex}`);
+        console.log(`First day of month: ${firstDayOfMonth.toDateString()}`);
+        console.log(`First day of week: ${firstDayOfWeek}`);
+        console.log(`First occurrence of day: ${firstOccurrenceOfDay}`);
+        console.log(`Current date: ${date.getDate()}`);
+        console.log(`Calculated week: ${week}`);
+        if (schedule.type === "biweekly") {
+          console.log(
+            `Target weeks: ${schedule.firstWeek} and ${schedule.secondWeek}`
+          );
+        } else if (schedule.type === "monthly") {
+          console.log(`Target week: ${schedule.week}`);
+        }
+      }
 
       switch (schedule.type) {
         case "weekly":
           return day === schedule.dayIndex;
 
         case "biweekly":
+          // For biweekly shows, we need to check if this is the correct week
+          // and if it's the correct day
           return (
             day === schedule.dayIndex &&
             (week === schedule.firstWeek || week === schedule.secondWeek)
           );
 
         case "monthly":
+          // For monthly shows, we need to check if this is the correct week
+          // and if it's the correct day
           return day === schedule.dayIndex && week === schedule.week;
 
         case "everyNth":
+          // For every Nth week shows, we need to check if this is the correct week
+          // and if it's the correct day
           return day === schedule.dayIndex && week === schedule.week;
 
         default:
@@ -507,22 +569,29 @@
         dateHeader.textContent = day;
         dayDiv.appendChild(dateHeader);
 
-        const dayShows = shows.filter((show) => {
-          const schedule = parseSchedule(show.subtitle);
-          return isShowOnDate(schedule, date);
-        });
+        const dayShows = shows.filter((show) =>
+          isShowOnDate(show.schedule, date)
+        );
+
+        // Sort shows by start time
+        dayShows.sort((a, b) => a.schedule.startHour - b.schedule.startHour);
 
         dayShows.forEach((show) => {
           const showLink = document.createElement("a");
           showLink.className = "show-item";
           showLink.href = show.url;
-          const schedule = parseSchedule(show.subtitle);
-          if (schedule) {
-            const timeStr = `${schedule.startHour} ${
-              schedule.startHour >= 12 ? "PM" : "AM"
-            } - ${schedule.endHour} ${schedule.endHour >= 12 ? "PM" : "AM"}`;
+          if (show.schedule) {
+            function formatHour(hour) {
+              if (hour === 0) return "12 AM";
+              if (hour === 12) return "12 PM";
+              if (hour > 12) return `${hour - 12} PM`;
+              return `${hour} AM`;
+            }
+            const timeStr = `${formatHour(
+              show.schedule.startHour
+            )} - ${formatHour(show.schedule.endHour)}`;
             showLink.textContent = `${show.title} (${timeStr})`;
-            if (isShowLive(schedule)) {
+            if (isShowLive(show.schedule)) {
               showLink.classList.add("live");
             }
           }
@@ -540,17 +609,21 @@
 
     // Get all shows with their URLs
     const shows = Array.from(document.querySelectorAll(".portfolio-cell")).map(
-      (cell) => ({
-        title: cell.querySelector(".caption-content div").textContent,
-        subtitle: cell.querySelector(".caption-content span").textContent,
-        url: cell.querySelector("a.portfolio-link").getAttribute("href"),
-      })
+      (cell) => {
+        const subtitle = cell.querySelector(
+          ".caption-content span"
+        ).textContent;
+        return {
+          title: cell.querySelector(".caption-content div").textContent,
+          subtitle: subtitle,
+          url: cell.querySelector("a.portfolio-link").getAttribute("href"),
+          schedule: parseSchedule(subtitle),
+        };
+      }
     );
 
     // Update live show banner
-    const liveShow = shows.find((show) =>
-      isShowLive(parseSchedule(show.subtitle))
-    );
+    const liveShow = shows.find((show) => isShowLive(show.schedule));
     if (liveShow) {
       document.getElementById("currentShowTitle").textContent = liveShow.title;
     } else {

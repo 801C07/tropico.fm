@@ -4,7 +4,7 @@ title: Sunset Cruise
 feature-img: "assets/img/header/about.jpeg"
 img: "/assets/img/programs/sunset.png"
 profile: "/assets/img/programs/sunset.png"
-subtitle: 1st and 3rd Tuesdays 7 PM - 9 PM
+subtitle: Wednesdays 6 PM - 7 PM
 tags: [Sunset Cruise, Pau Pau]
 programmer: "Pau Pau"
 mixcloud: "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ftropicofm%2Fplaylists%2Flowriders-oldies%2F"
