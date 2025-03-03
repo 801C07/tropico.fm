@@ -152,8 +152,29 @@
     border: 1px solid #006600;
     padding: 10px;
     min-height: 120px;
+    max-height: 300px;
     background: #003300;
     transition: background-color 0.2s;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .calendar-day::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .calendar-day::-webkit-scrollbar-track {
+    background: #002200;
+    border-radius: 3px;
+  }
+
+  .calendar-day::-webkit-scrollbar-thumb {
+    background: #006600;
+    border-radius: 3px;
+  }
+
+  .calendar-day::-webkit-scrollbar-thumb:hover {
+    background: #008800;
   }
 
   .calendar-day:hover {
